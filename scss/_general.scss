@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Links
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+}
+
+// List Items
+ul, li {
+  list-style-type: none;
+}
+
+// Images
+img {
+  display: inline-block;
+  width: 100%;
+}
+
+// Utilities
+.active {
+  color: $primary-color;
+}

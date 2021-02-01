@@ -1,0 +1,290 @@
+@import 'variables';
+@import 'general';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+// Header
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  padding: 0.75rem;
+  border-bottom: 3px solid $primary-color;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: #fff;
+  z-index: 10;
+
+  &-info {
+    h2 {
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  &-nav ul {
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      margin-left: 10px;
+    }
+  }
+}
+
+// Landing Page
+.landing-container {
+  background: url('/images/landing.jpg') no-repeat center center/cover;
+  background-blend-mode: multiply;
+  margin-top: 66px;
+  height: calc(100vh - 66px);
+
+  .landing-content p {
+    color: $fifth-color;
+    font-size: 1.6rem;
+    padding: 3rem 0 0 1rem;
+
+    i {
+      display: none;
+    }
+
+    &::first-letter {
+      font-size: 3rem;
+      color: $primary-color;
+    }
+  }
+}
+
+// About 
+.about {
+  background: #e8e8e8;
+  padding: 1.25rem;
+
+  &-container {
+    background-color: #fff;;
+    padding: 1.25rem;
+  }
+
+  &-content {
+    text-align: center;
+    hyphens: auto;
+
+    img {
+      width: 12.5rem;
+      -webkit-box-shadow: 0 0 10px gray;
+        box-shadow: 0 0 10px gray;
+      border-radius: 3px;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      text-align: justify;
+      color: $fourth-color;
+    }
+  }
+}
+
+// Portfolio
+.portfolio {
+  padding: 5rem 1.25rem 2rem;
+  background-color: $secondary-color;
+  color: #fff;
+}
+
+.projects {
+
+  .project {
+    position: relative;
+    margin-bottom: 3rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      transition: all 0.3s ease-in;
+    }
+
+    a:hover {
+      padding: 0.25rem;
+    }
+
+    img {
+      margin-bottom: 0.25rem;
+      border-radius: 8px;
+    }
+
+    h3 {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -74%);
+      background-color: $third-color;
+      padding: 0.25rem 0.5rem;
+      border-radius: 10px;
+      white-space: nowrap;
+    }
+
+    figcaption {
+      text-align: center;
+    }
+  }
+}
+
+.contact {
+  background-color: #e8e8e8;
+  padding: 1rem;
+
+  &-container {
+
+    .contact-info {
+      line-height: 1.8;
+      margin-bottom: 2rem;
+
+      .content {
+        text-align: center;
+      }
+    }
+
+    h4 {
+      font-size: 1.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .contact-socials {
+      display: flex;
+      justify-content: center;
+
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.75rem;
+      }
+
+      a {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        margin-right: 1rem;
+        border-radius: 50%;
+        padding: 0.6rem;
+      }
+
+      .facebook {
+        background-color: $secondary-color;
+      }
+      .instagram {
+        background-color: palevioletred;
+      }
+      .linkedin {
+        background-color: steelblue;
+      }
+      .twitter {
+        background-color: skyblue;
+      }
+    }
+
+  }
+}
+
+a.anchor {
+  position: relative;
+  top: -64px;
+}
+
+#home {
+  scroll-margin-top: 66px;
+}
+
+// Tablet Devices
+@media (min-width: 768px) {
+  .landing-container {
+  
+    .landing-content p {
+      font-size: 2rem;
+  
+      i {
+        display: inline-block;
+        color: $primary-color;
+      }
+    }
+  }
+
+  .about {
+
+    &-content {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin: 0 1.5rem 0 0;
+      }
+    }
+  }
+
+  .portfolio {
+    padding-bottom: 0;
+  }
+
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.25rem;
+  }
+
+  .contact {
+    padding: 4rem 0;
+  }
+
+  .contact-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .landing-container {
+  
+    .landing-content p {
+      font-size: 2.4rem;
+
+      i {
+        transform: scale(1.4);
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  .about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .portfolio-container {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .social-media h4 {
+    margin-bottom: 2rem;
+  }
+
+  .social-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+}
