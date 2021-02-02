@@ -149,6 +149,12 @@ a.anchor {
 #home {
   scroll-margin-top: 66px; }
 
+h3 {
+  display: none; }
+
+.projects h3 {
+  display: block; }
+
 @media (min-width: 768px) {
   .landing-container .landing-content p {
     font-size: 2rem; }

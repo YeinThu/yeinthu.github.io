@@ -204,6 +204,14 @@ a.anchor {
   scroll-margin-top: 66px;
 }
 
+h3 {
+  display: none;
+}
+
+.projects h3 {
+  display: block;
+}
+
 // Tablet Devices
 @media (min-width: 768px) {
   .landing-container {

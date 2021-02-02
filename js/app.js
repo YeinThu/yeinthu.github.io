@@ -12,3 +12,8 @@ navLinks.forEach(navLink => {
     }
   })
 })
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('.fa-phone').style.color = '#B73225';
+  document.querySelector('.fa-envelope').style.color = '#004E7C';
+})
